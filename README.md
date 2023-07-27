@@ -13,7 +13,7 @@ This project is a simple random cat GIF generator with a text overlay feature. I
   
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following environment variables to your .env.local file
 
 `VITE_APP_CAT_API_KEY`
 
