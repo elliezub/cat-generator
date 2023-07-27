@@ -2,6 +2,8 @@
 
 This project is a simple random cat GIF generator with a text overlay feature. It allows you to fetch random cat GIFs from a public API and then add custom text overlays to them, all built with React and Vite for speed and performance.
 
+<img width="717" alt="Screen Shot 2023-07-26 at 11 58 42 PM" src="https://github.com/elliezub/cat-generator/assets/112726692/c072d728-6404-43d7-a3f3-e9859874ff19">
+
 ## Features
 
 - Fetches a random cat GIF
