@@ -8,6 +8,14 @@ This project is a simple random cat GIF generator with a text overlay feature. I
 - Add custom text overlay on the GIF
 - Built with React for component-based architecture
 - Vite for faster and leaner development experience
+  
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`VITE_APP_CAT_API_KEY`
+
+And request an API key from https://thecatapi.com/
 
 ## Run Locally
 
@@ -42,6 +50,5 @@ Contributions are always welcome!
 ## Credits
 
 - Cat GIFs provided by the CatAPI.
-- Get your own API key here:https://thecatapi.com/
 
 Happy coding! 🐱🎉
