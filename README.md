@@ -42,5 +42,6 @@ Contributions are always welcome!
 ## Credits
 
 - Cat GIFs provided by the CatAPI.
+- Get your own API key here:https://thecatapi.com/
 
 Happy coding! 🐱🎉
