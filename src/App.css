@@ -73,6 +73,11 @@ a:hover {
   box-shadow: 0 0 black;
 }
 
+.loading {
+ max-width: 50%;
+ margin: auto;
+}
+
 .cat {
   position: relative;
   display: flex;

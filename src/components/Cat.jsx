@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import Loader from "../loading/346.svg";
 
 export default function Cat() {
+  const [loading, setLoading] = useState(true);
   const [cat, setCat] = useState({
     topText: "",
     bottomText: "",
@@ -23,7 +25,9 @@ export default function Cat() {
       .then((data) => {
         const newCatGifUrls = data.map((item) => item.url);
         setCatGifUrls(newCatGifUrls); // Set the new URLs to state
-      });
+        setLoading(false);
+      })
+      .catch((error) => console.log(error));
   }, []);
 
   function getCatImage() {
@@ -62,12 +66,17 @@ export default function Cat() {
           value={cat.bottomText}
           onChange={handleChange}
         />
-        <button className="form--button" onClick={getCatImage}>
+        <button
+          className="form--button"
+          onClick={getCatImage}
+          disabled={loading}
+        >
           Get a new cat image 🐱
         </button>
       </div>
       <div className="cat">
-        <img src={cat.randomImage} className="cat--image" />
+        {loading && <img src={Loader} alt="Loading.." className="loading" />}
+        {!loading && <img src={cat.randomImage} className="cat--image" />}
         <h2 className="meme--text top">{cat.topText}</h2>
         <h2 className="meme--text bottom">{cat.bottomText}</h2>
       </div>
