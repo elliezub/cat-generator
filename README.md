@@ -21,7 +21,8 @@ And request an API key from https://thecatapi.com/
 
 ## Run Locally
 
-Clone the project
+Clone the project=]
+
 
 ```bash
   git clone https://link-to-project
