@@ -31,12 +31,20 @@ export default function Cat() {
   }, []);
 
   function getCatImage() {
+    if (buttonDisabled) return; // Don't do anything if the button is disabled
+
+    setButtonDisabled(true); // Disable the button temporarily
     const randomNumber = Math.floor(Math.random() * catGifUrls.length);
     const url = catGifUrls[randomNumber];
     setCat((prevCat) => ({
       ...prevCat,
       randomImage: url,
     }));
+
+    // Re-enable the button after a short delay (1 second in this example)
+    setTimeout(() => {
+      setButtonDisabled(false);
+    }, 1000);
   }
 
   function handleChange(event) {
@@ -66,13 +74,13 @@ export default function Cat() {
           value={cat.bottomText}
           onChange={handleChange}
         />
-        <button
-          className="form--button"
-          onClick={getCatImage}
-          disabled={loading}
-        >
-          Get a new cat image 🐱
-        </button>
+      <button
+        className="form--button"
+        onClick={getCatImage}
+        disabled={loading || buttonDisabled} // Disable the button if loading or buttonDisabled is true
+      >
+        Get a new cat image 🐱
+      </button>
       </div>
       <div className="cat">
         {loading && <img src={Loader} alt="Loading.." className="loading" />}
